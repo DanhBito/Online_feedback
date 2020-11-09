@@ -13,6 +13,7 @@ Hệ thống Phản hồi của Sinh viên dành cho sinh viên đại học đ�
 - Quản trị viên
 - Khoa
 - Sinh viên
+
 2.Tính năng quản trị
 - Đăng nhập quản trị viên
 - Quản trị viên có thể thêm giảng viên mới
@@ -24,6 +25,7 @@ Hệ thống Phản hồi của Sinh viên dành cho sinh viên đại học đ�
 - Quản trị viên có thể kiểm tra phản hồi trung bình cho giảng viên
 - Quản trị viên có thể cập nhật động chi tiết liên hệ
 - Quản trị viên có thể cập nhật mật khẩu
+
 3.Tính năng của Khoa
 - Khoa có thể đăng nhập
 - Khoa có thể cập nhật hồ sơ của họ
@@ -31,6 +33,7 @@ Hệ thống Phản hồi của Sinh viên dành cho sinh viên đại học đ�
 - Khoa có thể kiểm tra phản hồi của sinh viên
 - Khoa có thể kiểm tra phản hồi trung bình của sinh viên
 - Đăng xuất
+
 4.Tính năng dành cho sinh viên
 - Sinh viên có thể đăng ký
 - Sinh viên có thể Đăng nhập
