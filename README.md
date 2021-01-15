@@ -1,11 +1,11 @@
 # Đề tài: Xây Dựng Website quản lý phản hồi của sinh viên
 
 # Các thành viên trong nhóm:
-  1 Dương Duy Danh (Nhóm trưởng). 
+  1 Dương Duy Danh (Nhóm trưởng). Thực hiện chức năng của admin
   
-  2 Châu Hoàng Minh Khôi.
+  2 Châu Hoàng Minh Khôi. Thực hiện chức năng của sinh viên
   
-  3 Nguyễn Thế Quốc Khang.
+  3 Nguyễn Thế Quốc Khang. Thực hiện chức năng của khoa
   
 Hệ thống Phản hồi của Sinh viên dành cho sinh viên đại học đã được phát triển nhằm mục đích đánh giá và phân tích hiệu suất của giảng viên đại học.Loại hệ thống Phản hồi Sinh viên này làm giảm bớt sự vất vả khi kiểm tra các trang phản hồi của từng học sinh.Hệ thống cũng giảm bớt gánh nặng về nỗ lực và gánh nặng của việc lưu giữ và bảo quản các hồ sơ trên cơ sở thủ công, nó đòi hỏi nhiều không gian và an toàn để lưu giữ các hồ sơ đó.Ngoài ra, có thể thực hiện nâng cao hơn nữa và có thể thêm nhiều tính năng hơn để truy xuất chi tiết phản hồi tốt hơn.
 
