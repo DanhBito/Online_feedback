@@ -1,7 +1,7 @@
 # Đề tài: Xây Dựng Website quản lý phản hồi của sinh viên
 
 # Các thành viên trong nhóm:
-  1 Dương Duy Danh (Nhóm trưởng).
+  1 Dương Duy Danh (Nhóm trưởng). 
   
   2 Châu Hoàng Minh Khôi.
   
@@ -22,7 +22,6 @@ Hệ thống Phản hồi của Sinh viên dành cho sinh viên đại học đ�
 - Quản trị viên có thể Xóa khoa
 - Quản trị viên có thể Quản lý sinh viên
 - Quản trị viên có thể Kiểm tra phản hồi của sinh viên
-- Quản trị viên có thể kiểm tra phản hồi trung bình cho giảng viên
 - Quản trị viên có thể cập nhật động chi tiết liên hệ
 - Quản trị viên có thể cập nhật mật khẩu
 
