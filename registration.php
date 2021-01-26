@@ -36,7 +36,7 @@ mkdir("images/$e");
 move_uploaded_file($_FILES['img']['tmp_name'],"images/$e/".$_FILES['img']['name']);
 
 
-$err="<font color='blue'><h3 align='center'>Registration successfull !!<h3></font>";
+$err="<font color='blue'><h3 align='center'>Đăng Ký Thành Công !!<h3></font>";
 
 }
 }
