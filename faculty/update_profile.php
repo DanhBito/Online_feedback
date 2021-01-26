@@ -3,7 +3,7 @@
 	if(isset($save))
 	{	
 	
-	mysqli_query($conn,"update faculty set Name='$n',designation	='$desg',programme='$prg',semester='$sem',mobile='$mob',	password='$pass' where email='".$_SESSION['faculty_login']."'");	
+	mysqli_query($conn,"update faculty set Name='$n',position	='$position',specialized='$specialized',semester='$sem',mobile='$mob',	password='$pass' where email='".$_SESSION['faculty_login']."'");	
 
 $err="<font color='green'>Faculty Details updated</font>";
 
@@ -35,8 +35,8 @@ $res=mysqli_fetch_assoc($con);
 	
 	<div class="control-group form-group">
     	<div class="controls">
-        	<label>Designation:</label>
-            	<input type="text" value="<?php echo @$res['designation'];?>" name="desg" class="form-control" required>
+        	<label>position:</label>
+            	<input type="text" value="<?php echo @$res['position'];?>" name="position" class="form-control" required>
         </div>
    	</div>
  	
@@ -56,8 +56,8 @@ $res=mysqli_fetch_assoc($con);
 	
 	<div class="control-group form-group">
     	<div class="controls">
-        	<label>Programme:</label>
-  <input type="text"  name="prg" value="<?php echo @$res['programme'];?>" class="form-control" required>
+        	<label>specialized:</label>
+  <input type="text"  name="specialized" value="<?php echo @$res['specialized'];?>" class="form-control" required>
         </div>
     </div>
 	
