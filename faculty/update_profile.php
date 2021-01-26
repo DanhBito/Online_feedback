@@ -28,14 +28,14 @@ $res=mysqli_fetch_assoc($con);
 	
 	<div class="control-group form-group">
     	<div class="controls">
-        	<label>Name:</label>
+        	<label>Họ Và Tên:</label>
             	<input type="text" value="<?php echo @$res['Name'];?>" name="n" class="form-control" required>
         </div>
    	</div>
 	
 	<div class="control-group form-group">
     	<div class="controls">
-        	<label>position:</label>
+        	<label>Chức Vụ:</label>
             	<input type="text" value="<?php echo @$res['position'];?>" name="position" class="form-control" required>
         </div>
    	</div>
@@ -49,35 +49,35 @@ $res=mysqli_fetch_assoc($con);
 	
 	<div class="control-group form-group">
     	<div class="controls">
-        	<label>Password :</label>
+        	<label>Mật Khẩu :</label>
           <input type="text" value="<?php echo @$res['password'];?>"  name="pass" class="form-control" required>
         </div>
     </div>
 	
 	<div class="control-group form-group">
     	<div class="controls">
-        	<label>specialized:</label>
+        	<label>Chuyên Nghành:</label>
   <input type="text"  name="specialized" value="<?php echo @$res['specialized'];?>" class="form-control" required>
         </div>
     </div>
 	
 	<div class="control-group form-group">
     	<div class="controls">
-        	<label>Semester</label>
+        	<label>Học kỳ</label>
   <input type="text"  name="sem" value="<?php echo @$res['semester'];?>" class="form-control" required>
         </div>
     </div>
                   
 	<div class="control-group form-group">
     	<div class="controls">
-        	<label>Mobile Number:</label>
+        	<label>Số điện thoại:</label>
             	<input type="number" id="mob" value="<?php echo @$res['mobile'];?>" class="form-control" maxlength="10" name="mob"  required>
         </div>
   	</div>
 	
 	<div class="control-group form-group">
     	<div class="controls">
-            	<input type="submit" class="btn btn-success" name="save" value="Update  Profile">
+            	<input type="submit" class="btn btn-success" name="save" value="Cập Nhật">
         </div>
   	</div>
 	</form>
