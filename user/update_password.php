@@ -21,18 +21,18 @@ if($r==true)
 	$np=md5($np);
 	$sql=mysqli_query($conn,"update user set pass='$np' where email='$user'");
 	
-	$err="<font color='blue'>Password updated </font>";
+	$err="<font color='blue'>Cập Nhật Mật Khẩu Thành Công !! </font>";
 	}
 	else
 	{
-	$err="<font color='red'>New  password not matched with Confirm Password </font>";
+	$err="<font color='red'>Nhập Lại Mật Khẩu Sai </font>";
 	}
 }
 
 else
 {
 
-$err="<font color='red'>Wrong Old Password </font>";
+$err="<font color='red'>Sai Mật Khẩu </font>";
 
 }
 }
