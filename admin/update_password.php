@@ -9,17 +9,17 @@ if(isset($update_password))
     $pass=$row['pass'];
 	if($op!=$pass)
 		{
-		$err="<font color='red'>You Enterd wrong old password</font>";
+		$err="<font color='red'>Nhập Mật Khẩu Cũ Sai !</font>";
 		}
 		
 	elseif($np!=$cp)
 		{
-		$err="<font color='red'>New Password and confirm password must be same</font>";
+		$err="<font color='red'>Nhập Lại Mật Khẩu Không Đúng!</font>";
 		}
 	else
 	{
 		mysqli_query($conn,"update admin set pass='$cp'");
-		$err="<font color='green'>Password have been Changed successfully !!</font>";
+		$err="<font color='green'>Cập Nhật Mật Khẩu Thành Công !!</font>";
 	}
 
 }
