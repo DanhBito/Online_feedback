@@ -9,7 +9,7 @@ $r=mysqli_num_rows($sql);
 
 if($r==true)
 {
-$err= "<font color='red'><h3 align='center'>This user already exists</h3></font>";
+$err= "<font color='red'><h3 align='center'>Người dùng đã tồn tại</h3></font>";
 }
 else
 {
