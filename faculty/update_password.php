@@ -6,7 +6,7 @@ if(isset($save))
 
 	if($np=="" || $cp=="" || $op=="")
 	{
-	$err="<font color='red'>fill all the fileds first</font>";	
+	$err="<font color='red'>Điền đầy đủ thông tin</font>";	
 	}
 	else
 	{
@@ -20,18 +20,18 @@ if($r==true)
 	{
 	$sql=mysqli_query($conn,"update faculty set password='$np' where email='".$_SESSION['faculty_login']."'");
 	
-	$err="<font color='blue'>Password updated </font>";
+	$err="<font color='blue'>Cập Nhật Mật Khẩu Thành Công </font>";
 	}
 	else
 	{
-	$err="<font color='red'>New  password not matched with Confirm Password </font>";
+	$err="<font color='red'>Nhập Lại Mật Khẩu Sai </font>";
 	}
 }
 
 else
 {
 
-$err="<font color='red'>Wrong Old Password </font>";
+$err="<font color='red'>Sai Mật Khẩu Cũ </font>";
 
 }
 }
