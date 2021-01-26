@@ -14,7 +14,7 @@ mysqli_query($conn,$query);
 
 
 
-$err="<font color='blue'>Profie updated successfully !!</font>";
+$err="<font color='blue'>Cập Nhật Hồ Sơ Thành Công !!</font>";
 
 
 }
