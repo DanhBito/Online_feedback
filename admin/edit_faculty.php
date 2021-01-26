@@ -1,65 +1,86 @@
-<script type="text/javascript">
-function deletes(id)
-{
-	a=confirm('Are You Sure To Remove This Record ?')
-	 if(a)
-     {
-        window.location.href='delete_faculty.php?id='+id;
-     }
-}
-</script>	
-
-
 <?php
-	echo "<table class='table table-responsive table-bordered table-striped table-hover' style=margin:15px;>";
-	echo "<tr>";
+	extract($_POST);
+	if(isset($save))
+	{	
 	
-	echo "<th>STT</th>";
-	echo "<th>Họ Tên</th>";
-	echo "<th>Chức vụ</th>";
-	echo "<th>Khoa</th>";
-	echo "<th>Học kì</th>";
-	echo "<th>Username</th>";	
-	echo "<th>Email</th>";
-	echo "<th>SĐT</th>";
-	echo "<th>Password</th>";
-	echo "<th>Update</th>";
-	echo "<th>Delete</th>";
-	echo "<th>Status</th>";
-	echo "</tr>";
-	
-	$i=1;
-	$que=mysqli_query($conn,"select * from faculty");
-	
-	while($row=mysqli_fetch_array($que))
-	{
-		echo "<tr>";
-		echo "<td>".$i."</td>";
-		echo "<td>".$row['Name']."</td>";
-		echo "<td>".$row['position']."</td>";
-		echo "<td>".$row['specialized']."</td>";
-		echo "<td>".$row['semester']."</td>";
-		echo "<td>".$row['user_alias']."</td>";
-		echo "<td>".$row['email']."</td>";
-		echo "<td>".$row['mobile']."</td>";
-		echo "<td>".$row['password']."</td>";
-		echo "<td class='text-center'><a href='dashboard.php?id=$row[id]&info=edit_faculty'><span class='glyphicon glyphicon-pencil'style=color:green;></span></a></td>";
-		
-		
-		echo "<td class='text-center'><a href='#' onclick='deletes($row[id])'><span class='glyphicon glyphicon-remove' style=color:red;></span></a></td>";
-		
-		
-		
-		if($row['status'])
-		{
-		echo "<td><a href='update_status.php?user_id=".$row['id']."&status=".$row['status']."'><span class='glyphicon glyphicon-user' style=color:red;></span></a></td>";
-		}
-		else
-		{
-		echo "<td><a href='update_status.php?user_id=".$row['id']."&status=".$row['status']."'><span class='glyphicon glyphicon-user' style=color:green;></span></a></td>";
-		}
-		echo "</tr>";
-		$i++;
+	mysqli_query($conn,"update faculty set Name='$n',position	='$position',specialized='$specialized',semester='$sem',mobile='$mob',	password='$pass' where id='".$_GET['id']."'");	
+
+$err="<font color='green'>Cập Nhật Thành CÔng</font>";
+
 	}
-	
+
+$con=mysqli_query($conn,"select * from faculty where id='".$_GET['id']."'");
+
+$res=mysqli_fetch_assoc($con);	
+
 ?>
+
+
+<h1 class="page-header">Cập Nhật</h1>
+<div class="col-lg-8" style="margin:15px;">
+	<form method="post">
+	
+	<div class="control-group form-group">
+    	<div class="controls">
+        	<label><?php echo @$err;?></label>
+        </div>
+   	</div>
+	
+	<div class="control-group form-group">
+    	<div class="controls">
+        	<label>Họ Tên:</label>
+            	<input type="text" value="<?php echo @$res['Name'];?>" name="n" class="form-control" required>
+        </div>
+   	</div>
+	
+	<div class="control-group form-group">
+    	<div class="controls">
+        	<label>Chức Vụ:</label>
+            	<input type="text" value="<?php echo @$res['position'];?>" name="position" class="form-control" required>
+        </div>
+   	</div>
+ 	
+	<div class="control-group form-group">
+    	<div class="controls">
+        	<label>Email :</label>
+            	<input type="email" value="<?php echo @$res['email'];?>"  name="email" class="form-control" required>
+        </div>
+    </div>
+	
+	<div class="control-group form-group">
+    	<div class="controls">
+        	<label>Mật Khẩu :</label>
+          <input type="text" value="<?php echo @$res['password'];?>"  name="pass" class="form-control" required>
+        </div>
+    </div>
+	
+	<div class="control-group form-group">
+    	<div class="controls">
+        	<label>Chuyên Ngành:</label>
+  <input type="text"  name="specialized" value="<?php echo @$res['specialized'];?>" class="form-control" required>
+        </div>
+    </div>
+	
+	<div class="control-group form-group">
+    	<div class="controls">
+        	<label>Học Kỳ</label>
+  <input type="text"  name="sem" value="<?php echo @$res['semester'];?>" class="form-control" required>
+        </div>
+    </div>
+                  
+	<div class="control-group form-group">
+    	<div class="controls">
+        	<label>Số Điện Thoại:</label>
+            	<input type="number" id="mob" value="<?php echo @$res['mobile'];?>" class="form-control" maxlength="10" name="mob"  required>
+        </div>
+  	</div>
+	
+	<div class="control-group form-group">
+    	<div class="controls">
+            	<input type="submit" class="btn btn-success" name="save" value="Cập Nhật">
+        </div>
+  	</div>
+	</form>
+
+
+</div>
