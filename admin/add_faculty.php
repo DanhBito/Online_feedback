@@ -29,7 +29,7 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
 	}
 	else
 	{	
-		mysqli_query($conn,"insert into faculty values('','$user_name','$name','$Designation','$prg','$sem','$email','$pass','$mob',now(),'0')");
+		mysqli_query($conn,"insert into faculty values('','$user_name','$name','$position','$specialized','$sem','$email','$pass','$mob',now(),'0')");
 		
 	$subject ="New User Account Creation";
 	$from="info@phptpoint.com";
@@ -65,7 +65,7 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
 	<div class="control-group form-group">
     	<div class="controls">
         	<label>Chức vụ:</label>
-            	<input type="text" value="<?php echo @$Designation;?>" name="Designation" class="form-control" required>
+            	<input type="text" value="<?php echo @$position;?>" name="position" class="form-control" required>
         </div>
    	</div>
  	
@@ -86,7 +86,7 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
 	<div class="control-group form-group">
     	<div class="controls">
         	<label>Khoa:</label>
-  <input type="text"  name="prg" value="<?php echo @$prg;?>" class="form-control" required>
+  <input type="text"  name="specialized" value="<?php echo @$specialized;?>" class="form-control" required>
         </div>
     </div>
 	
