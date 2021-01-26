@@ -27,7 +27,7 @@ $imageName=$_FILES['img']['name'];
 $pass=md5($p);
 
 
-$query="insert into user values('','$n','$e','$pass','$mob','$pro','$sem','$gen','$hob','$imageName','$dob',now())";
+$query="insert into user values('','$n','$e','$pass','$mob','$spe','$sem','$gen','$hob','$imageName','$dob',now())";
 mysqli_query($conn,$query);
 
 //upload image
@@ -78,7 +78,7 @@ $err="<font color='blue'><h3 align='center'>Registration successfull !!<h3></fon
 				
 				<tr>
 					<td>Khoa</td>
-					<Td><select name="pro" class="form-control" required>
+					<Td><select name="spe" class="form-control" required>
 					<option>Lap Trinh Web</option>
 					<option>Mang May Tinh</option>
 					<option>Lap Trinh Android</option>
