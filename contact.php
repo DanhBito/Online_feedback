@@ -6,7 +6,7 @@ if(isset($save))
 
 mysqli_query($conn,"insert into contact values('','$n','$m','$e','$msg',now())");
 	
-$err="<font color='green'>Admin Will Contact you soon</font>";	
+$err="<font color='green'>Chúng tối sẽ liên lạc với bạn sau!!</font>";	
 
 }
 
