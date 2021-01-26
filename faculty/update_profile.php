@@ -5,7 +5,7 @@
 	
 	mysqli_query($conn,"update faculty set Name='$n',position	='$position',specialized='$specialized',semester='$sem',mobile='$mob',	password='$pass' where email='".$_SESSION['faculty_login']."'");	
 
-$err="<font color='green'>Faculty Details updated</font>";
+$err="<font color='green'>Cập Nhật Thành Công</font>";
 
 	}
 
