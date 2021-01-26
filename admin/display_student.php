@@ -35,7 +35,7 @@ function deletes(id)
 		echo "<td>".$row['name']."</td>";
 		echo "<td>".$row['email']."</td>";
 		echo "<td>".$row['mobile']."</td>";
-		echo "<td>".$row['programme']."</td>";
+		echo "<td>".$row['specialized']."</td>";
 		echo "<td>".$row['semester']."</td>";
 		echo "<td>".$row['regid']."</td>";
 		
