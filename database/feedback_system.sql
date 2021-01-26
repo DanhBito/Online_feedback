@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2021 at 02:02 PM
+-- Generation Time: Jan 26, 2021 at 05:30 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -74,8 +74,8 @@ CREATE TABLE `faculty` (
   `id` int(11) NOT NULL,
   `user_alias` varchar(30) NOT NULL,
   `Name` varchar(30) NOT NULL,
-  `designation` varchar(100) NOT NULL,
-  `programme` varchar(50) NOT NULL,
+  `position` varchar(100) NOT NULL,
+  `specialized` varchar(50) NOT NULL,
   `semester` varchar(10) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(75) NOT NULL,
@@ -88,10 +88,10 @@ CREATE TABLE `faculty` (
 -- Dumping data for table `faculty`
 --
 
-INSERT INTO `faculty` (`id`, `user_alias`, `Name`, `designation`, `programme`, `semester`, `email`, `password`, `mobile`, `date`, `status`) VALUES
+INSERT INTO `faculty` (`id`, `user_alias`, `Name`, `position`, `specialized`, `semester`, `email`, `password`, `mobile`, `date`, `status`) VALUES
 (7, 'duydanh', 'Duy Danh', 'Chu nhiem khoa', 'Lap trinh web', 'ii', 'duydanh@gmail.com', 'duydanh', 337136172, '2020-11-21 14:30:53', 0),
 (8, 'minhkhoi', 'Chau Hoang Minh Khoi', 'Pho Chu Nhiem Khoa', 'Lap trinh web', 'ii', 'minhkhoi@gmail.com', 'minhkhoi', 345667891, '2020-01-21 14:37:35', 0),
-(11, 'quockhang', 'Nguyen The Quoc Khang', 'Giang Vien', 'Lap trinh web', 'i', 'quockhang@gmail.com', 'quockhang', 123456789, '2020-11-21 14:40:35', 1),
+(11, 'quockhang', 'Nguyen The Quoc Khang', 'Giang Vien', 'Lap trinh web', 'i', 'quockhang@gmail.com', 'quockhang', 123456789, '2020-11-21 14:40:35', 0),
 (12, 'test4337', 'test', 'test', 'ABC', 'i', 'test@gmail.com', '123', 123456789, '2020-11-26 08:01:03', 0);
 
 -- --------------------------------------------------------
@@ -155,7 +155,7 @@ CREATE TABLE `user` (
   `email` varchar(40) NOT NULL,
   `pass` varchar(40) NOT NULL,
   `mobile` bigint(11) NOT NULL,
-  `programme` varchar(20) NOT NULL,
+  `specialized` varchar(20) NOT NULL,
   `semester` varchar(10) NOT NULL,
   `gender` varchar(40) NOT NULL,
   `hobbies` varchar(40) NOT NULL,
@@ -168,8 +168,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `pass`, `mobile`, `programme`, `semester`, `gender`, `hobbies`, `image`, `dob`, `regid`) VALUES
-(15, 'Duy Danh', 'student1@gmail.com', '5e5545d38a68148a2d5bd5ec9a89e327', 337136172, 'BCA', 'ii', 'm', 'playing', '1.jpg', '1999-12-20', '2021-01-14 21:07:26');
+INSERT INTO `user` (`id`, `name`, `email`, `pass`, `mobile`, `specialized`, `semester`, `gender`, `hobbies`, `image`, `dob`, `regid`) VALUES
+(15, 'Duy Danh', 'student1@gmail.com', '5e5545d38a68148a2d5bd5ec9a89e327', 337136172, 'BCA', 'ii', 'm', 'playing', '1.jpg', '1999-12-20', '2021-01-14 21:07:26'),
+(16, 'abc', 'abc@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 337136172, 'Lap Trinh Web', 'i', 'm', 'reading', '1.jpg', '1990-02-02', '2021-01-26 21:13:21');
 
 --
 -- Indexes for dumped tables
@@ -252,7 +253,7 @@ ALTER TABLE `files`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
